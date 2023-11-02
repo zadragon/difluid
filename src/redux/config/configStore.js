@@ -1,13 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { composeWithDevTools } from "redux-devtools-extension";
-import profileImgState from "../modules/profileSlice";
-import searchedVideoState from "../modules/searchedSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import profileCardState from '../modules/profileSlice';
 
 const store = configureStore(
-	{
-		reducer: { profileImgState, searchedVideoState },
-	},
-	composeWithDevTools()
+    {
+        reducer: {
+            profileCard: profileCardState,
+        },
+    },
+    composeWithDevTools(),
 );
 
 export default store;
