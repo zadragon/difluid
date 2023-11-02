@@ -72,7 +72,9 @@ const ContactBox = () => {
                                 ref={ref}
                                 value={email}
                             />
-                            <button type="submit" className="btnSubmit"></button>
+                            <button type="submit" className="btnSubmit">
+                                <span className="hidden">전송하기</span>{' '}
+                            </button>
                             {email === '' ? null : emailVaild ? null : (
                                 <p className="error">Please enter a valid email!</p>
                             )}
