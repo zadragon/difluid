@@ -65,7 +65,13 @@ const ContactBox = () => {
                     <strong>Subscribe to our newsletter</strong>
                     <form onSubmit={handleSubmit}>
                         <div className={`inputArea ${email === '' ? '' : emailVaild ? 'vaild' : 'invaild'}`}>
-                            <input type="text" placeholder="Enter your email" onChange={onChangeHandler} ref={ref} />
+                            <input
+                                type="text"
+                                placeholder="Enter your email"
+                                onChange={onChangeHandler}
+                                ref={ref}
+                                value={email}
+                            />
                             <button type="submit" className="btnSubmit"></button>
                             {email === '' ? null : emailVaild ? null : (
                                 <p className="error">Please enter a valid email!</p>
