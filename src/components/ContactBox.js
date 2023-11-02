@@ -168,6 +168,7 @@ const SubscribeArea = styled.div`
 const ContactBoxArea = styled.div`
     background: url(${bg => bg.bg}) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 156px 80px;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
