@@ -28,8 +28,26 @@ const profileSlice = createSlice({
         getProfileInfo: state => {
             return state;
         },
+        getShuffleArray: state => {
+            // 기존 배열 복사
+            var shuffledArray = state.slice();
+
+            // 배열을 랜덤 순서로 섞는 함수
+            function shuffleArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+
+            // 배열 섞기
+            shuffleArray(shuffledArray);
+            return shuffledArray;
+        },
     },
 });
 
-export const { getProfileInfo } = profileSlice.actions;
+export const { getProfileInfo, getShuffleArray } = profileSlice.actions;
 export default profileSlice.reducer;

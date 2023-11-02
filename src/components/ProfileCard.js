@@ -16,6 +16,7 @@ const ProfileCard = ({ userImg, userTitle, userDesc }) => {
 };
 
 const CardItem = styled.li`
+    flex: 1;
     .userImg {
         width: 108px;
         height: 108px;
